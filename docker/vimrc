@@ -1,0 +1,25 @@
+"taglist
+filetype on
+
+set encoding=utf-8
+set expandtab
+set number
+set smarttab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
+set ruler
+
+"syntax on
+set foldmethod=syntax
+set foldcolumn=3
+set foldlevel=99
+
+nnoremap <silent> + :silent! foldopen<CR>
+nnoremap <silent> - :silent! foldclose<CR>
+nnoremap <silent> * :silent! %foldopen<CR>
+nnoremap <silent> = :silent! %foldclose<CR>
+
+"filetype indent on
+auto FileType make setlocal noexpandtab

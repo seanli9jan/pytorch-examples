@@ -1,0 +1,7 @@
+### My setting ###
+export PATH=$PATH:$HOME/bin
+PS1='[\[\e[31;1m\]\u\[\e[32;1m\]@\h \[\033[01;34m\]\W\[\e[0m\]]\[\e[31;1m\]$\[\e[0m\] '
+# matplotlib
+export MPLBACKEND='Agg'
+# tzselect
+TZ='Asia/Taipei'; export TZ

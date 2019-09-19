@@ -1,0 +1,28 @@
+#!/bin/bash
+
+if [ -z $1 ]; then
+    option='-help'
+else
+    option=$1
+fi
+
+# Change directory
+cd $HOME
+
+if [ $option == '-fg' ]; then
+    # Run jupyter in the foreground
+    source $HOME/.bashrc && export SHELL=/bin/bash && jupyter lab --allow-root
+elif [ $option == '-bg' ]; then
+    # Run jupyter in the background
+    export SHELL=/bin/bash
+    nohup jupyter lab --allow-root > $HOME/jupyter.log &
+else
+    option='-h'
+fi
+
+if [ $option == '-h' ]; then
+    echo 'Usage: run_jupyter [options]'
+    echo 'Options:'
+    echo '  -fg  foreground mode'
+    echo '  -bg  background mode'
+fi
